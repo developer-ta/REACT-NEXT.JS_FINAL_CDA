@@ -1,0 +1,16 @@
+{
+  "news": "Promotion",
+  "title": "title",
+  "type": {
+    "meat": true,
+    "fish": true,
+    "withoutMeat": true
+  },
+  "price": 4,
+  "size": ["big", "small"],
+  "desc": " description",
+  "img": "https://www.google.fr/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fa%2Fa7%2FReact-icon.svg%2F1200px-React-icon.svg.png&imgrefurl=https%3A%2F%2Ffr.wikipedia.org%2Fwiki%2FReact&tbnid=HD3eXsrstv-_cM&vet=12ahUKEwiMvd_71IP6AhXozIUKHWLTAxUQMygAegUIARClAw..i&docid=Cd78Z_qevSizDM&w=1200&h=1043&q=react&hl=fr&ved=2ahUKEwiMvd_71IP6AhXozIUKHWLTAxUQMygAegUIARClAw",
+  "promo": 10,
+  "ingredient": ["a", "a", "a", "a"],
+  "extra": ["sauce", "i"]
+}

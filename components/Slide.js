@@ -4,7 +4,7 @@ import { FaAngleDoubleLeft, FaAngleDoubleRight } from 'react-icons/fa';
 export default function Slide() {
   const [imgSlide, setImgSlide] = useState([]);
   return (
-    <div className='flex flex-col p-1 '>
+    <div className='flex flex-col p-1 sm:w-[100%] m-auto max-w-[1420px]'>
       <div className=''>
         <Image
           layout='responsive'

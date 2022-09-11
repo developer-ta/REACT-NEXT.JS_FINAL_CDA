@@ -15,7 +15,7 @@ import { GiFullPizza, GiCakeSlice } from 'react-icons/gi';
 export default function ProductCart() {
   const [promo, setpromo] = useState([]);
   return (
-    <div className='uppercase text-center rounded-t-xl overflow-hidden border group active:border-blue-300 shadow-md shadow-slate-50 hover:shadow-lg hover:scale-105 hover:shadow-slate-100 active:shadow-slate-100 flex flex-col flex-wrap justify-center mb-7 w-[47%]'>
+    <div className='uppercase text-center rounded-t-xl overflow-hidden border group active:border-blue-300 shadow-md shadow-slate-50 hover:shadow-lg hover:scale-105 hover:shadow-slate-100 active:shadow-slate-100 flex flex-col flex-wrap justify-center mb-7 w-[47%] lg:w-[32%]'>
       <div className=' w-full'>
         <Image
           layout='responsive'
@@ -27,15 +27,21 @@ export default function ProductCart() {
           className=''
         />
       </div>
-      <div className='flex flex-col mb-1 p-2 justify-center '>
+      <div className='flex flex-col mb-1 p-2 justify-center items-center '>
         <h1 className=' text-xs'>titre</h1>
         <h2 className=' text-xs'>ProductCart</h2>
-        <span className='icon  flex  items-center justify-center  '>
+        <span className='icon  flex  items-center justify-center sm:w-[80%]  '>
           <FaConciergeBell className='text-yellow-300 mr-1 group-hover:animate-bounce' />
           <p>order</p>
         </span>
       </div>
-      {!promo ? <span className='icon  flex  text-center  '>bon plane {promo} %</span> : ''}
+      {promo ? (
+        ''
+      ) : (
+        <span className='icon  flex flex-row w-[90%] text-center bg-green-600 '>
+          bon plane {promo} %
+        </span>
+      )}
     </div>
   );
 }

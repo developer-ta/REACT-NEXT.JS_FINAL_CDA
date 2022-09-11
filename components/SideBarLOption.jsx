@@ -62,13 +62,13 @@ export default function SideBarLOption({ value }) {
 
   return (
     <div className='w-[98%] flex flex-col mb-4'>
-      <div className='uppercase text-center rounded-xl overflow-hidden border active:border-blue-300 shadow-md shadow-slate-50 hover:shadow-lg hover:scale-105 hover:shadow-slate-100 active:shadow-slate-100 flex flex-col sm:flex-row  sm: mb-3 mt-1 h-16 w-[17%] sm:w-[97%] sm:h-20   '>
-        <div className=' w-[36%]  rounded-xl overflow-hidden hidden sm:block sm:w-[39%] '>
+      <div className='uppercase text-center rounded-xl overflow-hidden border active:border-blue-300 shadow-md shadow-slate-50 hover:shadow-lg hover:scale-105 hover:shadow-slate-100 active:shadow-slate-100 flex flex-col sm:flex-row  sm: mb-3 mt-1 sm:h-[70px] w-[17%] sm:min-w-min-[41%] sm:w-[97%] h-16 lg:min-h-[100px] lg:min-w-min-[41%]  '>
+        <div className=' w-[36%]  rounded-xl overflow-hidden hidden sm:block sm:w-[100%] '>
           <Image
             layout='responsive'
             src={img}
-            width='99%'
-            height='95%'
+            width='100%'
+            height='98%'
             objectFit='cover'
             alt='/'
             className=''
@@ -77,7 +77,7 @@ export default function SideBarLOption({ value }) {
         <h2 className=' text-[90%]  m-3'>{menu}</h2>
       </div>
       <div className='flex flex-col ml-2 sm:w-[25%] sm:flex-row justify-between sm: h-6'>
-        <span className='icon flex items-center justify-center w-[25%] sm:w-[45%] sm:block '>
+        <span className='icon flex items-center justify-center w-[25%] sm:w-[57%]   sm:block '>
           {menu === 'boissons' && <MdOutlineLocalDrink />}
           {menu === 'dessert' && <GiCakeSlice />}
           {menu === 'menu adult' && <ImManWoman />}

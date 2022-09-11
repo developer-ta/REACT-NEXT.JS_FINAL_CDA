@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base {
+  body {
+    @apply flex flex-col  font-sans bg-gradient-to-r from-slate-900  to-cyan-900 text-stone-100 w-full;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
+  }
+  div ul li {
+    @apply uppercase flex flex-col transition duration-150 ease-in rounded-t-lg rounded-b-lg h-16 w-16 text-white
+	   hover:scale-105 hover:bg-slate-600 hover:opacity-90 active:bg-blue-500;
+  }
+  .shadowCart {
+    @apply uppercase text-center rounded-t-xl overflow-hidden border active:border-blue-500 shadow-md  shadow-slate-50 hover:shadow-lg hover:scale-105 hover:shadow-slate-100 active:shadow-slate-100 opacity-90;
+  }
+  .icon { 
+    @apply bg-cyan-600 rounded-full p-1 active:bg-cyan-500 flex items-center justify-center w-[21%];
+  }
+  .section{
+    @apply flex flex-col  outline outline-2 outline-slate-500 rounded-xl ml-3 mr-2 shadow-lg  shadow-orange-300 sm:w-[70%]
+  }
+}

@@ -15,8 +15,6 @@ import { ImUsers, ImManWoman } from 'react-icons/im';
 import { MdOutlineLocalDrink } from 'react-icons/md';
 import { GiFullPizza, GiCakeSlice } from 'react-icons/gi';
 import { FaChild, FaPizzaSlice } from 'react-icons/fa';
-import { useDispatch, useSelector } from 'react-redux';
-import { setEventSlideL, reSetEventSlideL } from '../redux/featureData';
 import SideBarLOption from './SideBarLOption';
 import { useState } from 'react';
 /* -------------------------------------------------------------------------- */
@@ -27,7 +25,7 @@ export default function SideBarL() {
   const sideBarData = [
     { menu: 'menu adult', img: '/assets/img1.jpg' },
     { menu: 'menu enfent', img: '/assets/img2.jpg' },
-    { menu: 'seul', img: '/assets/img3.jpg' },
+    { menu: 'pizza seul', img: '/assets/img3.jpg' },
     { menu: 'boissons', img: '/assets/img4.jpg' },
     { menu: 'dessert', img: '/assets/img5.jpg' },
   ];
@@ -43,9 +41,9 @@ export default function SideBarL() {
     //     </div>
     //   </div>
     // );
-    <section className='  flex flex-col sm:items-center outline outline-2 outline-slate-500 rounded-md  top-[90%]  w-full  text-center z-30 overflow-hidden bg-gradient-to-r from-cyan-900  to-slate-900 text-stone-100 shadow-sm  shadow-orange-300 sm:static sm:w-[25%] sm:z-0  '>
-      <h1 className='text-sm text-orange-400 hidden sm:block sm:text-xl '>pizza</h1>
-      <div className='w-[99%] flex pt-1 flex-row sm:flex-col justify-around sm:items-center  '>
+    <section className='fixed  flex flex-col sm:items-center outline outline-2 outline-slate-500 rounded-md  top-[90%]  w-full  text-center z-30 overflow-hidden bg-gradient-to-r from-cyan-900  to-slate-900 text-stone-100 shadow-sm  shadow-orange-300 sm:static sm:w-[25%] sm:z-0 '>
+      <h1 className='text-sm text-orange-400 hidden sm:block sm:text-xl'>pizza</h1>
+      <div className='w-[99%] flex pt-1 flex-row sm:flex-col justify-around sm:items-center '>
         {data.sideBarData.map((value, i) => (
           <SideBarLOption value={value} key={i} />
         ))}

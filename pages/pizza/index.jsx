@@ -9,12 +9,13 @@ import SideBarL from '../../components/SideBarL';
 import Presentation from '../../components/Presentation';
 import ProductCartList from '../../layouts/ProductCartList';
 import { useDispatch, useSelector } from 'react-redux';
+import axios from 'axios';
 
 /* -------------------------------------------------------------------------- */
 /*                                    react                                   */
 /* -------------------------------------------------------------------------- */
 
-export default function Home() {
+export default function Home({ pizza }) {
   return (
     <div className='flex flex-col max-w-[1420px] m-auto'>
       <Head>
@@ -37,11 +38,15 @@ export default function Home() {
 /* -------------------------------------------------------------------------- */
 /*                      Communication avec serveur getServerSideProps         */
 /* -------------------------------------------------------------------------- */
-
 export async function getServerSideProps(ctx) {
+  //   const data = await axios.get();
+  const data = await import('../pizza/j.json');
+  const pizza = data.pizza;
+
+  //   const res = await data.;
   return {
     props: {
-      data: null,
+      data: pizza,
     },
   };
 }

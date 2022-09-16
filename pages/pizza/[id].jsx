@@ -27,12 +27,17 @@ import { HomeIcon } from '@heroicons/react/outline';
 import { GiFullPizza } from 'react-icons/gi';
 import { GiHamburger } from 'react-icons/gi';
 import { useSelector } from 'react-redux';
+import { useRouter } from 'next/router';
 
-export default function HandlerProduct() {
+export default function HandlerProduct({ data }) {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [icon, setIcon] = useState({});
   const { menu } = useSelector((state) => state.data.event);
-
+  console.log('menu: ', menu);
+  const [dataPizza, setdataPizza] = useState(data);
+  console.log('dataPizza: ', dataPizza);
+  const router = useRouter();
+  console.log('router: ', router);
   useEffect(() => {
     setIcon(fineIcon());
   }, []);
@@ -42,12 +47,12 @@ export default function HandlerProduct() {
       <Presentation />
       <ul className='flex flex-row justify-between text-white items-center  pt-1 h-full'>
         <li className='group flex-col flex justify-center items-center   bg-cyan-600 rounded-full p-1 active:bg-cyan-500 '>
-          {'title' === 'pizza' ? (
+          {router.pathname === '/pizza/[id]' ? (
             <GiFullPizza className='w-9 h-9 group-hover:animate-bounce' />
           ) : (
             <GiHamburger className='w-9 h-9 group-hover:animate-bounce' />
           )}
-          <p className='text-sm active:scale-105'>{'pizza'}</p>
+          <p className='text-sm active:scale-105'>{router.pathname.split('/')[1]}</p>
         </li>
         <li className='group flex-col flex justify-center items-center   bg-cyan-600 rounded-full p-1 active:bg-cyan-500 '>
           {menu.indexOf('menu') !== -1 ? (
@@ -60,4 +65,16 @@ export default function HandlerProduct() {
       </ul>
     </div>
   );
+}
+export async function getServerSideProps(ctx) {
+  //   const data = await axios.get();
+  const data = await import('../pizza/j.json');
+  const pizza = data.pizza;
+
+  //   const res = await data.;
+  return {
+    props: {
+      data: pizza,
+    },
+  };
 }

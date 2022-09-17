@@ -11,11 +11,12 @@ import {
 import { ImUsers, ImManWoman } from 'react-icons/im';
 import { MdOutlineLocalDrink } from 'react-icons/md';
 import { GiFullPizza, GiCakeSlice } from 'react-icons/gi';
+import Link from 'next/link';
 
 export default function ProductCart() {
   const [promo, setpromo] = useState([]);
   return (
-    <div className='uppercase text-center rounded-t-xl overflow-hidden border group active:border-blue-300 shadow-md shadow-slate-50 hover:shadow-lg hover:scale-105 hover:shadow-slate-100 active:shadow-slate-100 flex flex-col flex-wrap justify-center mb-7 w-[47%] lg:w-[32%] '>
+    <>
       <div className=' w-full '>
         <Image
           layout='responsive'
@@ -42,6 +43,6 @@ export default function ProductCart() {
           bon plane {promo} %
         </span>
       )}
-    </div>
+    </>
   );
 }

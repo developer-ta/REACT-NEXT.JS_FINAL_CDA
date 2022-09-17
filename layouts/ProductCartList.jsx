@@ -16,13 +16,30 @@
 import React, { useState, useEffect } from 'react';
 import ProductCart from '../components/ProductCart';
 import { useSelector } from 'react-redux';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+
 // c'est ton option dépendre sélection de produits Pizza adulte enfants Ussel
-export default function ProductCartList() {
+export default function ProductCartList({ data }) {
+  console.log('dataPizza: ', data);
+  const fishPizza = {
+    meat: 'Viande',
+    fish: 'Poisson',
+    withoutMeat: 'Sans Viande',
+  };
   const { menu } = useSelector((state) => state.data.event);
-  // console.log('menu: ', menu);
+  const [result, setResult] = useState([]);
+  const [title, setTitle] = useState('');
+  const router = useRouter();
+  console.log('router: ', router);
 
   const [stateChoose, setChoose] = useState('');
-
+  function handleType(ingredient) {
+    console.log('ingredient: ', ingredient);
+    setResult(data.filter((item) => item.type[ingredient] === true));
+    setTitle(fishPizza[ingredient]);
+  }
+  console.log('result: ', result);
   const [choose, age] = menu;
   useEffect(() => {
     console.log('choose: ', choose);
@@ -40,30 +57,53 @@ export default function ProductCartList() {
       <div
         className={`w-[100%]  flex flex-row justify-around mb-4 shadow-slate-500 shadow-sm  border-b pb-3 pt-3 ${stateChoose}`}
       >
-        <a href='#viande'>
-          <button className=' btn'>viande</button>
-        </a>
-        <button className=' btn'>{menu} Poisson/fruit de la mère</button>
-        <button className=' btn'>{menu} sans viande</button>
+        <button className=' btn' onClick={() => handleType('meat')}>
+          viande
+        </button>
+
+        <button
+          className=' btn p-2  md:min-w-[190px] flex flex-col'
+          onClick={() => handleType('fish')}
+        >
+          Poisson <br /> <span className='text-xs text-orange-300'>fruit de la mère</span>
+        </button>
+        <button className=' btn' onClick={() => handleType('withoutMeat')}>
+          {' '}
+          sans viande
+        </button>
       </div>
       <div
-        className={`w-[100%]  flex flex-row justify-around mb-4 shadow-slate-500 shadow-sm  border-b pb-3 pt-3 ${
+        className={` flex flex-row justify-around mb-4 shadow-slate-500 shadow-sm  border-b pb-3 pt-3 ${
           choose === 'boissons' || choose === 'dessert' ? '' : 'hidden'
         }`}
       >
-        <button className=' btn'>{choose} </button>
+        <h1 className='prose uppercase text-center  text-9xl bg-gradient-to-br from-orange-400 to-cyan-700   font-bold rounded-3xl overflow-hidden '>
+          {choose}{' '}
+        </h1>
       </div>
 
       <div className='flex flex-col p-2 sm:p-7 '>
-        {/* Poisson  */}
-        <h1 className='text-center mb-4 '>Poisson {menu}</h1>
+        <h1 className='text-center mb-4 '>{title}</h1>
+
         <div className='flex flex-row flex-wrap justify-between '>
-          <ProductCart />
+          <Link
+            href={{
+              pathname: `/pizza/${title}`,
+              query: { choose, age },
+            }}
+          >
+            <a className='uppercase text-center rounded-t-xl overflow-hidden border group active:border-blue-300 shadow-md shadow-slate-50 hover:shadow-lg hover:scale-105 hover:shadow-slate-100 active:shadow-slate-100 flex flex-col flex-wrap justify-center mb-7 w-[47%] lg:w-[32%] '>
+              <ProductCart />
+            </a>
+          </Link>
           <ProductCart />
           <ProductCart />
         </div>
         <div id='viande' className='pt-'>
           <h1>viande</h1>
+
+          <ProductCart />
+
           <ProductCart />
           <ProductCart />
 

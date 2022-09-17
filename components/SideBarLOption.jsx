@@ -48,9 +48,7 @@ export default function SideBarLOption({ value }) {
             className=''
           />
         </div>
-        <h2 className=' text-[90%]  m-3'>
-          {menu}---{data.menu}
-        </h2>
+        <h2 className=' text-[90%]  m-3'>{menu}</h2>
       </div>
       <div className='flex flex-col ml-2 sm:w-[25%] sm:flex-row justify-between sm: h-6'>
         <span className='icon flex items-center justify-center w-[25%] sm:w-[57%]   sm:block '>

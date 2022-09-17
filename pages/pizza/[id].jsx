@@ -29,7 +29,8 @@ import { GiHamburger } from 'react-icons/gi';
 import { useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
 
-export default function HandlerProduct({ data }) {
+export default function HandlerProduct({ data, id }) {
+  console.log('id: ', id);
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [icon, setIcon] = useState({});
   const { menu } = useSelector((state) => state.data.event);
@@ -67,6 +68,7 @@ export default function HandlerProduct({ data }) {
   );
 }
 export async function getServerSideProps(ctx) {
+  console.log(ctx);
   //   const data = await axios.get();
   const data = await import('../pizza/j.json');
   const pizza = data.pizza;
@@ -75,6 +77,7 @@ export async function getServerSideProps(ctx) {
   return {
     props: {
       data: pizza,
+      id: ctx.params.id,
     },
   };
 }

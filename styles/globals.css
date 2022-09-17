@@ -11,7 +11,7 @@
   h4,
   h5,
   h6 {
-    @apply font-bold;
+    @apply prose text-white font-bold;
   }
   div ul li {
     @apply uppercase flex flex-col transition duration-150 ease-in rounded-t-lg rounded-b-lg h-16 w-16 text-white 
@@ -27,7 +27,7 @@
     @apply flex flex-col  outline outline-2 outline-slate-500 rounded-xl ml-3 mr-2 shadow-lg  shadow-orange-300 sm:w-[70%] m-auto
   }
   .btn{
-    @apply uppercase text-center rounded-3xl overflow-hidden border active:border-blue-300 shadow-md shadow-slate-200 hover:shadow-lg hover:scale-105 hover:shadow-slate-100 active:shadow-slate-100 flex flex-row min-w-[120px] sm:mb-3 mt-1 sm:h-[60px] w-[15%]  h-12 lg:min-h-[80px]  bg-sky-900 
+    @apply uppercase text-center   bg-gradient-to-br from-slate-600  to-cyan-700 text-orange-400   font-medium rounded-3xl overflow-hidden border active:border-blue-300 shadow-md shadow-slate-200 hover:shadow-lg hover:scale-105 hover:shadow-slate-100 active:shadow-slate-100 flex flex-row items-center justify-around min-w-[130px] sm:mb-3 mt-1   h-12 lg:min-h-[67px]  bg-cyan-900 xl:min-h-[75px] md:p-3
   }
   #__next{
   border: solid 2px salmon;

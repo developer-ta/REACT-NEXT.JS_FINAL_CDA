@@ -4,7 +4,7 @@
 
 import Head from 'next/head';
 import Image from 'next/image';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import SideBarL from '../../components/SideBarL';
 import Presentation from '../../components/Presentation';
 import ProductCartList from '../../layouts/ProductCartList';
@@ -15,7 +15,10 @@ import axios from 'axios';
 /*                                    react                                   */
 /* -------------------------------------------------------------------------- */
 
-export default function Home({ pizza }) {
+export default function Home({ data }) {
+  console.log('data: ', data);
+  const [dataPizza, setdataPizza] = useState(data);
+  console.log('dataPizza: ', dataPizza);
   return (
     <div className='flex flex-col max-w-[1420px] m-auto'>
       <Head>
@@ -29,7 +32,7 @@ export default function Home({ pizza }) {
 
       <main className='flex flex-row  justify-between relative bottom-36  bg-gradient-to-r from-slate-900  to-cyan-900 text-stone-10 sm:rounded-3xl '>
         <SideBarL />
-        <ProductCartList />
+        <ProductCartList data={dataPizza} />
       </main>
     </div>
   );

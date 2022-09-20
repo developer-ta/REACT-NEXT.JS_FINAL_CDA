@@ -21,17 +21,33 @@
     @apply uppercase text-center rounded-t-xl overflow-hidden border active:border-blue-500 shadow-md  shadow-slate-50 hover:shadow-lg hover:scale-105 hover:shadow-slate-100 active:shadow-slate-100 opacity-90;
   }
   .icon { 
-    @apply bg-cyan-600 rounded-full p-1 active:bg-cyan-500 flex items-center justify-center w-[21%];
+    @apply bg-cyan-600 rounded-full p-1 active:bg-cyan-500 flex items-center justify-center;
   }
   .section{
-    @apply flex flex-col  outline outline-2 outline-slate-500 rounded-xl ml-3 mr-2 shadow-lg  shadow-orange-300 sm:w-[70%] m-auto
+    @apply flex flex-col  outline outline-2 outline-slate-500 rounded-xl  shadow-lg  shadow-orange-300 sm:w-[70%]
   }
   .btn{
-    @apply uppercase text-center   bg-gradient-to-br from-slate-600  to-cyan-700 text-orange-400   font-medium rounded-3xl overflow-hidden border active:border-blue-300 shadow-md shadow-slate-200 hover:shadow-lg hover:scale-105 hover:shadow-slate-100 active:shadow-slate-100 flex flex-row items-center justify-around min-w-[130px] sm:mb-3 mt-1   h-12 lg:min-h-[67px]  bg-cyan-900 xl:min-h-[75px] md:p-3
+    @apply uppercase text-center   bg-gradient-to-br from-slate-600  to-cyan-700 text-orange-400   font-medium rounded-3xl overflow-hidden border active:border-blue-300 shadow-md active:rounded-3xl shadow-slate-200 hover:shadow-lg hover:scale-105 hover:shadow-slate-100 active:shadow-slate-100 flex flex-row items-center justify-around min-w-[130px] sm:mb-3 mt-1   h-12 lg:min-h-[67px]  bg-cyan-900 xl:min-h-[75px] md:p-3
   }
+  .promo{@apply after:absolute after:right-3 after:top-[4%]	 after:bg-green-400/70 after:w-[20%] after:h-[9%]  after:rounded-full }
+  @media(max-width:639px){ 
+    .phoneNavBot{
+    bottom: 0%;
+    position: fixed;
+    height:auto;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    left: 0;
+    right: 0;
+    @apply overflow-hidden bg-gradient-to-r from-slate-900  to-cyan-900 text-stone-100  shadow-slate-500 shadow-[0px_-1px_5px_1px]  rounded-t-xl }}
+
   #__next{
   border: solid 2px salmon;
     display: flex;
     flex-direction: column;
   }
+
 }

@@ -29,51 +29,57 @@ import Link from 'next/link';
 
 export default function NavBar() {
   return (
-    <>
-      <nav
-        className=' flex w-[99.9%]  sticky top-0  h-20 flex-row justify-around text-center z-20 overflow-hidden bg-gradient-to-r from-slate-900  to-cyan-900 text-stone-100  shadow-slate-500 shadow-sm pt-3 max-w-[1412px] m-auto
-'
-      >
-        {/*   bg-gradient-to-tl from-purple-300 to-pink-400 text-red-600 rounded-md */}
-        <div className='w-[99%] h-full '>
-          <ul className='flex flex-row justify-between text-white items-center  pt-1 h-full'>
-            <Link href={'/'} passHref>
-              <li className='group'>
-                <HomeIcon className='h-9 group-hover:animate-bounce' />
-                <p className='text-sm active:scale-105'>Home</p>
-              </li>
-            </Link>
-            <Link href={'/pizza'} passHref>
-              <li className='group flex-col flex justify-center items-center  '>
-                <GiFullPizza className='w-9 h-9 group-hover:animate-bounce' />
-                <p className='text-sm active:scale-105'>pizza</p>
-              </li>
-            </Link>
-            <Link href={'/burger'} passHref>
-              <li className='group flex-col flex justify-center items-center '>
-                <GiHamburger className='w-9 h-9 group-hover:animate-bounce' />
-                <p className='text-sm active:scale-105'>burger</p>
-              </li>
-            </Link>
-            <li className='group flex-col flex justify-center items-center '>
-              <BsTelephoneInbound className='w-9 h-9 group-hover:animate-bounce' />
-              <p className='text-sm active:scale-105'>contact</p>
-            </li>{' '}
-            <li className='group flex-col flex justify-center items-center '>
-              <FaUserPlus className='w-9 h-9 group-hover:animate-bounce' />
-              <p className='text-sm active:scale-105'> s`inscrire</p>
-            </li>{' '}
-            <li className='group flex-col flex justify-center items-center '>
-              <FaRegIdCard className='w-9 h-8 group-hover:animate-bounce' />
-              <p className='text-sm active:scale-105'>identifiez</p>
-            </li>{' '}
-            <li className='group'>
-              <UserIcon className='h-9 group-hover:animate-bounce' />
-              <p className='text-sm active:scale-105'>admin</p>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </>
+    <nav
+      className=" flex w-[99.9%]  sticky top-0  h-20 flex-row  text-center z-20 overflow-hidden bg-gradient-to-r from-slate-900  to-cyan-900 text-stone-100  shadow-slate-500 shadow-sm pt-1 max-w-[1412px] m-auto  ;
+     
+"
+    >
+      {/*   bg-gradient-to-tl from-purple-300 to-pink-400 text-red-600 rounded-md */}
+
+      <ul className="sm:w-[45%] flex flex-row justify-around text-white items-center  pt-1 phoneNavBot">
+        <Link href={'/'} passHref>
+          <li className="group flex-col flex justify-center items-center">
+            <HomeIcon className="h-9  group-hover:animate-bounce" />
+            <p className="text-sm active:scale-105">Home</p>
+          </li>
+        </Link>
+        <Link href={'/pizza'} passHref>
+          <li className="group flex-col flex justify-center items-center   ">
+            <GiFullPizza className="w-9 h-9 group-hover:animate-bounce" />
+            <p className="text-sm active:scale-105">pizza</p>
+          </li>
+        </Link>
+        <Link href={'/burger'} passHref>
+          <li className="group flex-col flex justify-center items-center  ">
+            <GiHamburger className="w-9 h-9 group-hover:animate-bounce" />
+            <p className="text-sm active:scale-105">burger</p>
+          </li>
+        </Link>
+        <Link href={'/burger'} passHref>
+          <li className="group flex-col flex justify-center items-center  ">
+            <GiHamburger className="w-9 h-9 group-hover:animate-bounce" />
+            <p className="text-sm active:scale-105">burger</p>
+          </li>
+        </Link>
+      </ul>
+      <ul className="w-[55%] flex flex-row justify-around text-white items-center  pt-1">
+        <li className="group flex-col flex justify-center items-center  ">
+          <BsTelephoneInbound className="w-7 h-9 group-hover:animate-bounce" />
+          <p className="text-sm active:scale-105">contact</p>
+        </li>{' '}
+        <li className="group flex-col flex justify-center items-center ">
+          <FaRegIdCard className="w-7 h-9 group-hover:animate-bounce" />
+          <p className="text-sm active:scale-105"> connexion</p>
+        </li>{' '}
+        <li className="group flex-col flex justify-center items-center">
+          <FaUserPlus className="w-7 h-9 group-hover:animate-bounce" />
+          <p className="text-sm active:scale-105"> s`inscrire</p>
+        </li>{' '}
+        <li className="group flex-col flex justify-center items-center">
+          <UserIcon className="h-9 w-7 group-hover:animate-bounce " />
+          <p className="text-sm active:scale-105">admin</p>
+        </li>
+      </ul>
+    </nav>
   );
 }

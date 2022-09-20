@@ -34,6 +34,7 @@ export default function ProductCartList({ data }) {
   console.log('router: ', router);
 
   const [stateChoose, setChoose] = useState('');
+
   function handleType(ingredient) {
     console.log('ingredient: ', ingredient);
     setResult(data.filter((item) => item.type[ingredient] === true));
@@ -53,21 +54,21 @@ export default function ProductCartList({ data }) {
   }, [menu]);
 
   return (
-    <section className='section bg-gradient-to-r from-slate-900  to-cyan-900 text-stone-10  '>
+    <section className="section bg-gradient-to-r from-slate-900  to-cyan-900 text-stone-10  ">
       <div
-        className={`w-[100%]  flex flex-row justify-around mb-4 shadow-slate-500 shadow-sm  border-b pb-3 pt-3 ${stateChoose}`}
+        className={`w-[100%]  flex flex-row justify-around  shadow-slate-500 shadow-sm  border-b pb-3 pt-3 ${stateChoose}`}
       >
-        <button className=' btn' onClick={() => handleType('meat')}>
+        <button className=" btn" onClick={() => handleType('meat')}>
           viande
         </button>
 
         <button
-          className=' btn p-2  md:min-w-[190px] flex flex-col'
+          className=" btn p-2  md:min-w-[190px] flex flex-col"
           onClick={() => handleType('fish')}
         >
-          Poisson <br /> <span className='text-xs text-orange-300'>fruit de la mère</span>
+          Poisson <br /> <span className="text-xs text-orange-300">fruit de la mère</span>
         </button>
-        <button className=' btn' onClick={() => handleType('withoutMeat')}>
+        <button className=" btn" onClick={() => handleType('withoutMeat')}>
           {' '}
           sans viande
         </button>
@@ -77,29 +78,32 @@ export default function ProductCartList({ data }) {
           choose === 'boissons' || choose === 'dessert' ? '' : 'hidden'
         }`}
       >
-        <h1 className='prose uppercase text-center  text-9xl bg-gradient-to-br from-orange-400 to-cyan-700   font-bold rounded-3xl overflow-hidden '>
+        <h1 className="prose uppercase text-center  text-9xl bg-gradient-to-br from-orange-400 to-cyan-700   font-bold rounded-3xl overflow-hidden ">
           {choose}{' '}
         </h1>
       </div>
 
-      <div className='flex flex-col p-2 sm:p-7 '>
-        <h1 className='text-center mb-4 '>{title}</h1>
+      <div className="flex flex-col  sm:p-7 ">
+        <h1 className="text-center mb-3 text-8xl">{title}</h1>
 
-        <div className='flex flex-row flex-wrap justify-between '>
-          <Link
-            href={{
-              pathname: `/pizza/${title}`,
-              query: { choose, age },
-            }}
-          >
-            <a className='uppercase text-center rounded-t-xl overflow-hidden border group active:border-blue-300 shadow-md shadow-slate-50 hover:shadow-lg hover:scale-105 hover:shadow-slate-100 active:shadow-slate-100 flex flex-col flex-wrap justify-center mb-7 w-[47%] lg:w-[32%] '>
-              <ProductCart />
-            </a>
-          </Link>
-          <ProductCart />
-          <ProductCart />
+        <div className="flex flex-row flex-wrap justify-around ">
+          {result.map((product, i) => (
+            <Link
+              key={i}
+              href={{
+                //id data in title
+                pathname: `/pizza/${title}`,
+                query: { choose, age },
+              }}
+              passHref
+            >
+              <a className="w-[27%] mb-4">
+                <ProductCart />
+              </a>
+            </Link>
+          ))}
         </div>
-        <div id='viande' className='pt-'>
+        {/* <div id='viande' className='pt-'>
           <h1>viande</h1>
 
           <ProductCart />
@@ -112,7 +116,7 @@ export default function ProductCartList({ data }) {
         <div>
           <h1> sans viande</h1>
           <ProductCart />
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -4,11 +4,6 @@
 	"editor.wordWrap": "bounded",
 	"vue3snippets.proseWrap": "always",
 	"workbench.editor.wrapTabs": true,
-	"prettier.arrowParens": "always",
-	"prettier.bracketSameLine": false,
-	"prettier.jsxSingleQuote": true,
-	"prettier.vueIndentScriptAndStyle": false,
-	"prettier.useEditorConfig": false,
 	"reactSnippets.settings.prettierEnabled": true,
 	"reactSnippets.settings.languageScopes": "javascript,javascriptreact,typescript,typescriptreact"
 }

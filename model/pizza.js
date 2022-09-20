@@ -2,7 +2,7 @@ import { model, models, Schema } from 'mongoose';
 
 const pizzaSchema = new Schema(
   {
-    news: { type: String, required: true, maxlength: 100 },
+    news: { type: String, required: true, maxlength: 100, default: '' },
     title: { type: String, required: true, maxlength: 100, unique: true },
     type: { meat: Boolean, fish: Boolean, withoutMeat: Boolean },
     price: { type: Number, required: true, maxlength: 100, trimp: true },

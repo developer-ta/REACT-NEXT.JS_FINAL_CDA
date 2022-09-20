@@ -19,10 +19,10 @@ export default function Slide() {
 
       <div className='text-4xl flex flex-row justify-around w-full'>
         <FaAngleDoubleLeft />
-        <span className=' uppercase text-2xl text-stone-900 font-bold relative bottom-44 right-72 '>
+        {/* <span className=' uppercase text-2xl text-stone-900 font-bold relative bottom-44 right-72 '>
           <h1>titre</h1>
           <p>hhhhh</p>
-        </span>
+        </span> */}
         <FaAngleDoubleRight />
       </div>
     </div>

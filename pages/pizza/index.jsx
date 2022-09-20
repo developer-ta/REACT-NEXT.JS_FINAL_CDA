@@ -30,7 +30,7 @@ export default function Home({ data }) {
         <Presentation />
       </header>
 
-      <main className='flex flex-row  justify-between relative bottom-36  bg-gradient-to-r from-slate-900  to-cyan-900 text-stone-10 sm:rounded-3xl '>
+      <main className='flex flex-row  justify-around relative bottom-36  bg-gradient-to-r from-slate-900  to-cyan-900 text-stone-10 sm:rounded-3xl '>
         <SideBarL />
         <ProductCartList data={dataPizza} />
       </main>

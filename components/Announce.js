@@ -2,10 +2,10 @@ import React from 'react';
 
 export default function Announce() {
   return (
-    <div className=" h-15 flex flex-col text-center ">
-      <h1 className=" text-gradient-to-r from-red-300-900  to-cyan-900 text-stone-100 ">
-        titre info promo
-      </h1>
+    <div className=" h-15 flex flex-col m-auto text-center ">
+      <p className=" w-full text-transparent sm:text-lg text-sm  bg-clip-text bg-gradient-to-r from-rose-200 to-fuchsia-400 font-bold ">
+        2 pizzas achetée 1 pizza offerte pour les nouveaux membres !
+      </p>
     </div>
   );
 }

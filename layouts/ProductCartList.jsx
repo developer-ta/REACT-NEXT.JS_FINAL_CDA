@@ -54,7 +54,7 @@ export default function ProductCartList({ data }) {
   }, [menu]);
 
   return (
-    <section className="section bg-gradient-to-r from-slate-900  to-cyan-900 text-stone-10  ">
+    <section className="section bg-gradient-to-r from-slate-900  to-cyan-900 text-stone-10 sm: ">
       <div
         className={`w-[100%]  flex flex-row justify-around  shadow-slate-500 shadow-sm  border-b pb-3 pt-3 ${stateChoose}`}
       >

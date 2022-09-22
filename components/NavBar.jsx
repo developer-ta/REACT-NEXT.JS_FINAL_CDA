@@ -62,7 +62,7 @@ export default function NavBar() {
           </li>
         </Link>
       </ul>
-      <ul className="w-[55%] flex flex-row justify-around text-white items-center  pt-1">
+      <ul className="sm:w-[55%] flex flex-row justify-around text-white items-center  pt-1 phoneNavTop">
         <li className="group flex-col flex justify-center items-center  ">
           <BsTelephoneInbound className="w-7 h-9 group-hover:animate-bounce" />
           <p className="text-sm active:scale-105">contact</p>

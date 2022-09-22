@@ -40,7 +40,7 @@ export default function PromoCart() {
       </div>
       {promo <= 10 ? (
         <span
-          className={`absolute text-base font-bold right-3 top-[4%]	 bg-green-600/90 w-[30%] h-[11%] rounded-full ${
+          className={`absolute text-base font-bold right-3 top-[4%]	 bg-green-600/90 p-[3px] rounded-full ${
             (promo === 0 || !promo) && 'hidden'
           }`}
         >

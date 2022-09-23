@@ -35,8 +35,8 @@ export default function SideBarLOption({ value }) {
   // }
 
   return (
-    <div className="sm:w-[98%] sm:flex sm:flex-col sm:mb-4  " onClick={() => dispatch(set(menu))}>
-      <div className="uppercase text-center rounded-xl overflow-hidden border  active:border-blue-300 shadow-md shadow-slate-50 hover:shadow-lg hover:scale-105 hover:shadow-slate-100 active:shadow-slate-100 flex flex-col flex-wrap   sm: mb-3 mt-1 sm:h-[70px] sm:min-w-min-[41%] sm:w-[97%] h-16 lg:min-h-[100px] lg:min-w-min-[41%]  ">
+    <div className="sm:w-[87%]  sm:flex sm:flex-col sm:mb-4  " onClick={() => dispatch(set(menu))}>
+      <div className=" uppercase text-center rounded-xl overflow-hidden border  active:border-blue-300 shadow-md shadow-slate-50 hover:shadow-lg hover:scale-105 hover:shadow-slate-100 active:shadow-slate-100 flex flex-col flex-wrap   sm: mb-3 mt-1 sm:h-[70px] sm:min-w-min-[41%] sm:w-[97%] h-16 lg:min-h-[100px] lg:min-w-min-[41%]  ">
         <div className=" w-[36%]  rounded-xl overflow-hidden  sm:block sm:w-[41%] ">
           <Image
             layout="responsive"
@@ -48,7 +48,7 @@ export default function SideBarLOption({ value }) {
             className=""
           />
         </div>
-        <h2 className=" text-[90%]  m-3 w-[30%] break-words sm:w[50%]">{menu}</h2>
+        <h2 className=" text-[90%]  m-3 w-[30%] sm:break-words sm:w-[50%]">{menu}</h2>
       </div>
       <div className="phoneHidden  sm:flex  ml-2 sm:w-[25%] sm:flex-row justify-between sm: h-6">
         <span className="icon  flex items-center justify-center w-[25%] sm:w-[57%]   sm:block ">

@@ -43,9 +43,9 @@ export default function SideBarL() {
     //     </div>
     //   </div>
     // );
-    <section className="phoneSideBarL  flex flex-col sm:items-center outline outline-2 outline-slate-500 rounded-md  top-[90%]  w-full  text-center z-30 overflow-hidden bg-gradient-to-r from-cyan-900  to-slate-900 text-stone-100 shadow-sm  shadow-orange-300 sm:static sm:w-[30%] sm:z-0  ">
+    <section className=" sectionSideBarL flex flex-col  sm:items-center sm:outline sm:outline-2 sm:outline-slate-500 rounded-md  top-[90%]   text-center z-30 overflow-hidden sm:bg-gradient-to-r sm:from-cyan-900  sm:to-slate-900 sm:text-stone-100 sm:shadow-sm  sm:shadow-orange-300 sm:static sm:w-[40%] sm:z-0  ">
       <h1 className="text-sm text-orange-400 hidden sm:block sm:text-xl ">pizza</h1>
-      <div className="w-[99%] sm:flex pt-1 flex-row sm:flex-col justify-around sm:items-center  ">
+      <div className="phoneSlideBar w-[99%] sm:flex pt-1 sm:flex-col  sm:items-center  ">
         {data.sideBarData.map((value, i) => (
           <SideBarLOption value={value} key={i} />
         ))}

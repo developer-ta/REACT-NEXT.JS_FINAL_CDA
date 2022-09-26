@@ -18,6 +18,7 @@ import ProductCart from '../components/ProductCart';
 import { useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import PromoCart from '../components/PromoCart';
 
 // c'est ton option dépendre sélection de produits Pizza adulte enfants Ussel
 export default function ProductCartList({ data }) {
@@ -54,24 +55,24 @@ export default function ProductCartList({ data }) {
   }, [menu]);
 
   return (
-    <section className="section bg-gradient-to-r from-slate-900  to-cyan-900 text-stone-10 sm: ">
+    <section className="section bg-gradient-to-r from-slate-900  to-cyan-900 text-stone-10  ">
       <div
-        className={`w-[100%]  flex flex-row justify-around  shadow-slate-500 shadow-sm  border-b pb-3 pt-3 ${stateChoose}`}
+        className={`w-[99%]  flex flex-row justify-around items-center  flex-wrap shadow-slate-500 shadow-sm  border-b-2 sm:pb-3 sm:pt-3 ${stateChoose}`}
       >
-        <button className=" btn" onClick={() => handleType('meat')}>
+        <span className=" btn" onClick={() => handleType('meat')}>
           viande
-        </button>
+        </span>
 
-        <button
+        <span
           className=" btn p-2  md:min-w-[190px] flex flex-col"
           onClick={() => handleType('fish')}
         >
           Poisson <br /> <span className="text-xs text-orange-300">fruit de la mère</span>
-        </button>
-        <button className=" btn" onClick={() => handleType('withoutMeat')}>
+        </span>
+        <span className=" btn" onClick={() => handleType('withoutMeat')}>
           {' '}
           sans viande
-        </button>
+        </span>
       </div>
       <div
         className={` flex flex-row justify-around mb-4 shadow-slate-500 shadow-sm  border-b pb-3 pt-3 ${
@@ -87,7 +88,7 @@ export default function ProductCartList({ data }) {
         <h1 className="text-center mb-3 text-8xl">{title}</h1>
 
         <div className="flex flex-row flex-wrap justify-around ">
-          {result.map((product, i) => (
+          {/* 
             <Link
               key={i}
               href={{
@@ -97,10 +98,11 @@ export default function ProductCartList({ data }) {
               }}
               passHref
             >
-              <a className="w-[27%] mb-4">
-                <ProductCart />
-              </a>
+              <a style={{ width: '100%' }}></a>
             </Link>
+          ))} */}
+          {result.map((product, i) => (
+            <PromoCart key={i} choose={choose} age={age} product={product} />
           ))}
         </div>
         {/* <div id='viande' className='pt-'>

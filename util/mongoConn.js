@@ -1,13 +1,13 @@
 import mongoose from 'mongoose';
 
-const MONGODB_URL = process.env.MONGO_URL;
+const URI = process.env.MONGO_URL;
 
-async function dbMongoose() {
+export default async function dbMongoose() {
   mongoose
-    .connect(MONGODB_URL)
+    .connect(URI)
     .then(() => {
-      console.log('mongodb connect');
+      console.log('mongodb connected !!!!!!');
     })
     .catch((err) => console.log(err));
 }
-export default dbMongoose;
+

@@ -10,8 +10,8 @@ export default function Slide() {
           layout="responsive"
           src="/assets/img6.jpg"
           objectFit="cover"
-          width="800"
-          height="300"
+          width="1000"
+          height="400"
           alt="/"
           className="rounded-t-xl rounded-b-md
           "

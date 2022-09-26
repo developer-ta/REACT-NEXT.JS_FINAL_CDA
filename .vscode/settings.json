@@ -5,5 +5,9 @@
 	"vue3snippets.proseWrap": "always",
 	"workbench.editor.wrapTabs": true,
 	"reactSnippets.settings.prettierEnabled": true,
-	"reactSnippets.settings.languageScopes": "javascript,javascriptreact,typescript,typescriptreact"
+	"reactSnippets.settings.languageScopes": "javascript,javascriptreact,typescript,typescriptreact",
+	"editor.scrollbar.verticalScrollbarSize": 12,
+	"workbench.sideBar.location": "left",
+	"editor.inlineSuggest.enabled": true,
+	"huile8.autoRefresh": true
 }

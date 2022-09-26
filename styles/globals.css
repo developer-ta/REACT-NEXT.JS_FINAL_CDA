@@ -24,7 +24,7 @@
     @apply bg-cyan-600 rounded-full p-1 active:bg-cyan-500 flex items-center justify-center;
   }
   .section{
-    @apply flex flex-col  outline outline-2 outline-slate-500 rounded-xl  shadow-lg  shadow-orange-300 sm:w-[65%]
+    @apply flex flex-col  outline outline-2 outline-slate-500 rounded-xl  shadow-lg  shadow-orange-300  w-[98%] mt-2  sm:w-[65%]
   }
   .btn{
     @apply uppercase text-center   bg-gradient-to-br from-slate-600  to-cyan-700 text-orange-400   font-medium rounded-3xl overflow-hidden border active:border-blue-300 shadow-md active:rounded-3xl shadow-slate-200 hover:shadow-lg hover:scale-105 hover:shadow-slate-100 active:shadow-slate-100 flex flex-row items-center justify-around min-w-[130px] sm:mb-3 mt-1   h-12 lg:min-h-[67px]  bg-cyan-900 xl:min-h-[75px] md:p-3
@@ -40,6 +40,7 @@
     
 
    }
+
    /* .phoneSlideBar{
     display: flex;
     flex-direction: row;
@@ -51,8 +52,8 @@
   @media  all and (min-width:425px) and (max-width:639px){
     .sectionSideBarL{
       width: 75%;
-      
-  
+
+
      }
    
     .promoCartTop{
@@ -63,6 +64,10 @@
    }
   @media all and (max-width:639px ){ 
     .pizzaHomeMain{@apply flex flex-col  justify-around items-center sticky   rounded-3xl top-[86px] 
+
+    }
+    .btn{
+@apply text-sm  h-10  m-2
 
     }
     .phoneNavBot{
@@ -100,6 +105,7 @@
  padding: 0;
 margin:auto;
     max-width: 1420px;
+    
   }
 
 

@@ -12,6 +12,7 @@
     "@heroicons/react": "v1",
     "@reduxjs/toolkit": "^1.8.5",
     "axios": "^0.27.2",
+    "bcrypt": "^5.0.1",
     "mongoose": "^6.5.4",
     "next": "12.2.5",
     "react": "^18.2.0",
@@ -19,6 +20,7 @@
     "react-icons": "^4.4.0",
     "react-redux": "^8.0.2",
     "redux": "^4.2.0",
+    "tailwindcss-animation": "^0.1.2",
     "validator": "^13.7.0"
   },
   "devDependencies": {
